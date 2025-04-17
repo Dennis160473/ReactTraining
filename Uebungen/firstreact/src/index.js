@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Footer from "./Footer";
 import Komponente from "./Komponente";
-import ChartsOverviewDemo from "./ChartsOverviewDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +13,6 @@ root.render(
     <Komponente Name="Max" />
     <Komponente Name="Suheib" />
     <Komponente Name="Hans" />
-    <ChartsOverviewDemo />
     <Footer />
   </React.StrictMode>
 );

@@ -1,13 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Header from "./Header";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Footer from "./Footer";
+import Komponente from "./Komponente";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Header />
     <App />
+    <Komponente Name="Der Osterhase" />
+    <Komponente Name="Der Weihnachtsmann" />
+    <Komponente Name="Der Sensenmann" />
+    <Footer />
   </React.StrictMode>
 );
 

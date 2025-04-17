@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
-function App() {
+function Counter() {
+  // let zahl = 15
+  const [zahl, setZahl] = useState(0);
+  const [colour, setColour] = useState("red");
+
+  function reset() {
+    setZahl(0);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <p>Meine Lieblingszahl ist {zahl}</p>
+
+      <button onClick={() => setZahl(zahl + 1)}>+</button>
+      <button onClick={() => setZahl(zahl - 1)}>-</button>
+      <button onClick={reset}>Reset</button>
+      <br></br>
+      <br></br>
+      <br></br>
+      <h1 style={{ color: colour }}>Ich bin eine Überschrift</h1>
+      <button onClick={() => setColour("green")}>
+        Ändere die Farbe zu grün
+      </button>
+      <button onClick={() => setColour("yellow")}>
+        Ändere die Farbe zu gelb
+      </button>
+    </>
   );
 }
 
-export default App;
+export default Counter;
